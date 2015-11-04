@@ -21,7 +21,7 @@ DELIMITER $$
 --
 CREATE DEFINER=`arma3`@`localhost` PROCEDURE `resetLifeVehicles`()
 BEGIN
-	UPDATE vehicles SET `active`= 0;
+	UPDATE `vehicles` SET `active`= 0;
 END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `deleteDeadVehicles`()
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `players` (
   `mediclevel` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
   `arrested` tinyint(1) NOT NULL DEFAULT '0',
   `aliases` text NOT NULL,
-  `adminlevel` enum('0','1','2','3') NOT NULL DEFAULT '0',
+  `adminlevel` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
   `donatorlvl` enum('0','1','2','3','4','5') NOT NULL DEFAULT '0',
   `civ_gear` text NOT NULL,
   `blacklist` tinyint(1) NOT NULL DEFAULT '0',
