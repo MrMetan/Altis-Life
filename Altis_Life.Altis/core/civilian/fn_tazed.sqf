@@ -31,7 +31,7 @@ if(_shooter isKindOf "Man" && alive player) then {
 		};
 		
 		[[_unit],"life_fnc_tazeSound",true,false] call life_fnc_MP;
-		_obj = "Land_ClutterCutter_small_F" createVehicleLocal ASLTOATL(visiblePositionASL player); //Again why in the fuck was this being created globally? I could of sworn I made it local back in ARMA 3 Beta...
+		_obj = "Land_ClutterCutter_small_F" createVehicle ASLTOATL(visiblePositionASL player); //Again why in the fuck was this being created globally? I could of sworn I made it local back in ARMA 3 Beta...
 		_obj setPosATL ASLTOATL(visiblePositionASL player);
 		[[player,"AinjPfalMstpSnonWnonDf_carried_fallwc"],"life_fnc_animSync",true,false] call life_fnc_MP;
 		[[0,"STR_NOTF_Tazed",true,[profileName, _shooter GVAR ["realname",name _shooter]]],"life_fnc_broadcast",true,false] call life_fnc_MP;
