@@ -17,9 +17,9 @@ USE `arma3life`;
 DELIMITER $$
 --
 -- Procedures
--- Edit arma3 and root to match a user in MySQL
+-- Edit root to match a user in MySQL
 --
-CREATE DEFINER=`arma3`@`localhost` PROCEDURE `resetLifeVehicles`()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `resetLifeVehicles`()
 BEGIN
 	UPDATE `vehicles` SET `active`= 0;
 END$$

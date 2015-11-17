@@ -1,4 +1,4 @@
-#Altis-Life
+﻿#Altis-Life
 
 Altis Life / Altis Life RPG is developed by Tonic / TAW_Tonic. This contains primarily the release contain and on-going development changes to the mission.
 Altis Life RPG by Tonic is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
@@ -29,3 +29,49 @@ The terms are subjected to be changed over time.
 
 Disclaimer:
 The vast majority of the code / framework has been written by me. Any additional code / content used is fully credited and owned by it’s author as well as linked to the authors content (Forums,Media,etc). The additional content used within the framework either has the expressed permission of the content creators permission or was automatically used under the GPU (General Purpose License) from public posting with no usage / TOA / Disclaimer, however they still own the rights to their content. If in any case that content is being used within this mission / framework that the content creator doesn’t wish for it to be used due to my strict TOA / Agreement all you need to do is ask for it to be removed and it will be honored.
+
+------------------------------------------------------------------
+
+This build is for extDB2 https://github.com/Torndeco/extdb2
+
+You need to edit extdb-conf.ini before trying to setup your server, changing:
+```
+[MySQL_Example]
+Type = MySQL
+Name = Database_Name
+
+Username = root
+Password = password
+
+IP = 127.0.0.1
+Port = 3306
+```
+to something like:
+
+```
+[AltisLife]
+Type = MySQL
+Name = arma3life
+
+Username = root
+Password = password
+
+IP = 127.0.0.1
+Port = 3306
+```
+
+Remember to change Username, Password & IP to match your database.
+
+
+For Linux:
+
+Requirements:
+Working Linux Arma3Server
+
+Debian/Ubuntu
+apt-get install libtbb2:i386
+
+RedHat/CentOS
+yum install tbb.i686
+
+Extract the static build (if you do not know how to build on a linux os) to the root directory.
