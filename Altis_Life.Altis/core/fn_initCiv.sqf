@@ -15,37 +15,37 @@ waitUntil {!(isNull (findDisplay 46))};
 [] spawn {
 	while {true} do {
 		waitUntil{uniform player == "U_C_Poloshirt_blue"};
-		player setObjectTextureGlobal [0, "textures\civilian_uniform_1.jpg"]
+		player setObjectTextureGlobal [0, "textures\civilian_uniform_1.jpg"];
 		waitUntil{uniform player != "U_C_Poloshirt_blue"};
 	};
 	while {true} do {
 		waitUntil{uniform player == "U_C_Poloshirt_burgundy"};
-		player setObjectTextureGlobal [0, "textures\civilian_uniform_2.jpg"]
+		player setObjectTextureGlobal [0, "textures\civilian_uniform_2.jpg"];
 		waitUntil{uniform player != "U_C_Poloshirt_burgundy"};
 	};
 	while {true} do {
 		waitUntil{uniform player == "U_C_Poloshirt_stripped"};
-		player setObjectTextureGlobal [0, "textures\civilian_uniform_3.jpg"]
+		player setObjectTextureGlobal [0, "textures\civilian_uniform_3.jpg"];
 		waitUntil{uniform player != "U_C_Poloshirt_stripped"};
 	};
 	while {true} do {
 		waitUntil{uniform player == "U_C_Poloshirt_tricolour"};
-		player setObjectTextureGlobal [0, "textures\civilian_uniform_4.jpg"]
+		player setObjectTextureGlobal [0, "textures\civilian_uniform_4.jpg"];
 		waitUntil{uniform player != "U_C_Poloshirt_tricolour"};
 	};
 	while {true} do {
 		waitUntil{uniform player == "U_C_Poloshirt_salmon"};
-		player setObjectTextureGlobal [0, "textures\civilian_uniform_5.jpg"]
+		player setObjectTextureGlobal [0, "textures\civilian_uniform_5.jpg"];
 		waitUntil{uniform player != "U_C_Poloshirt_salmon"};
 	};
 	while {true} do {
 		waitUntil{uniform player == "U_C_Poloshirt_redwhite"};
-		player setObjectTextureGlobal [0, "textures\civilian_uniform_6.jpg"]
+		player setObjectTextureGlobal [0, "textures\civilian_uniform_6.jpg"];
 		waitUntil{uniform player != "U_C_Poloshirt_redwhite"};
 	};
 	while {true} do {
 		waitUntil{uniform player == "U_C_Commoner1_1"};
-		player setObjectTextureGlobal [0, "textures\civilian_uniform_7.jpg"]
+		player setObjectTextureGlobal [0, "textures\civilian_uniform_7.jpg"];
 		waitUntil{uniform player != "U_C_Commoner1_1"};
 	};
 };

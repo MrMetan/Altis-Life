@@ -41,37 +41,37 @@ switch(playerSide) do
 		[] spawn {
 			while {true} do {
 				waitUntil{uniform player == "U_C_Poloshirt_blue"};
-				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"]
+				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"];
 				waitUntil{uniform player != "U_C_Poloshirt_blue"};
 			};
 			while {true} do {
 				waitUntil{uniform player == "U_C_Poloshirt_burgundy"};
-				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"]
+				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"];
 				waitUntil{uniform player != "U_C_Poloshirt_burgundy"};
 			};
 			while {true} do {
 				waitUntil{uniform player == "U_C_Poloshirt_stripped"};
-				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"]
+				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"];
 				waitUntil{uniform player != "U_C_Poloshirt_stripped"};
 			};
 			while {true} do {
 				waitUntil{uniform player == "U_C_Poloshirt_tricolour"};
-				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"]
+				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"];
 				waitUntil{uniform player != "U_C_Poloshirt_tricolour"};
 			};
 			while {true} do {
 				waitUntil{uniform player == "U_C_Poloshirt_salmon"};
-				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"]
+				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"];
 				waitUntil{uniform player != "U_C_Poloshirt_salmon"};
 			};
 			while {true} do {
 				waitUntil{uniform player == "U_C_Poloshirt_redwhite"};
-				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"]
+				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"];
 				waitUntil{uniform player != "U_C_Poloshirt_redwhite"};
 			};
 			while {true} do {
 				waitUntil{uniform player == "U_C_Commoner1_1"};
-				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"]
+				player setObjectTextureGlobal [0, "textures\civilian_uniform.jpg"];
 				waitUntil{uniform player != "U_C_Commoner1_1"};
 			};
 		};
