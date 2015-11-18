@@ -64,8 +64,17 @@ switch (_code) do {
 		};
 	};
 	
-	//Load player skins when close dialog
+	//Esc Key
 	case 1: {
+		//Prevents players from inventory dupe
+		life_action_delay = time;
+		while {true} do {
+			waitUntil {(time - life_action_delay) > 0.5}
+			if(_code == 23) then {
+				exitWith {hint localize "STR_NOTF_ActionDelay"};
+			};
+		};
+		//Load player skins when close dialog
 		if(dialog) then {
 			[] call life_fnc_playerSkins;
 		};
