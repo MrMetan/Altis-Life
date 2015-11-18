@@ -15,32 +15,13 @@ if(isNull _unit OR _item == "") exitWith {}; //Bad thingies?
 
 switch(playerSide) do
 {
-	case west: {
-		if(_item in ["U_Rangemaster"]) then {
-			[] spawn {
-				while {true} do {
-					waitUntil{uniform player == "U_Rangemaster"};
-					switch(true) do {
-						case (FETCH_CONST(life_coplevel) < 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-						case (FETCH_CONST(life_coplevel) == 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-						case (FETCH_CONST(life_coplevel) == 3) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-						case (FETCH_CONST(life_coplevel) == 4) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-						case (FETCH_CONST(life_coplevel) == 5) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-						case (FETCH_CONST(life_coplevel) == 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-						case (FETCH_CONST(life_coplevel) > 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };	
-					};
-					waitUntil{uniform player != "U_Rangemaster"};
-				};
-			};
-		};
-	};
 	case civilian: {
 		//Currently stoping the civilians from taking the Rangemaster clothing from medics or cops.
 		if(_item in ["U_Rangemaster"]) then {
 			[_item,false,false,false,false] call life_fnc_handleItem;
 		};
 
-		if(_item in ["U_C_Poloshirt_blue"]) the
+		if(_item in ["U_C_Poloshirt_blue"]) then {
 			[] spawn {
 				while {true} do {
 					waitUntil{uniform player == "U_C_Poloshirt_blue"};
@@ -49,7 +30,7 @@ switch(playerSide) do
 				};
 			};
 		};
-		if(_item in ["U_C_Poloshirt_burgundy"]) the
+		if(_item in ["U_C_Poloshirt_burgundy"]) then {
 			[] spawn {
 				while {true} do {
 					waitUntil{uniform player == "U_C_Poloshirt_burgundy"};
@@ -58,7 +39,7 @@ switch(playerSide) do
 				};
 			};
 		};
-		if(_item in ["U_C_Poloshirt_stripped"]) the
+		if(_item in ["U_C_Poloshirt_stripped"]) then {
 			[] spawn {
 				while {true} do {
 					waitUntil{uniform player == "U_C_Poloshirt_stripped"};
@@ -67,7 +48,7 @@ switch(playerSide) do
 				};
 			};
 		};
-		if(_item in ["U_C_Poloshirt_tricolour"]) the
+		if(_item in ["U_C_Poloshirt_tricolour"]) then {
 			[] spawn {
 				while {true} do {
 					waitUntil{uniform player == "U_C_Poloshirt_tricolour"};
@@ -76,7 +57,7 @@ switch(playerSide) do
 				};
 			};
 		};
-		if(_item in ["U_C_Poloshirt_salmon"]) the
+		if(_item in ["U_C_Poloshirt_salmon"]) then {
 			[] spawn {
 				while {true} do {
 					waitUntil{uniform player == "U_C_Poloshirt_salmon"};
@@ -85,7 +66,7 @@ switch(playerSide) do
 				};
 			};
 		};
-		if(_item in ["U_C_Poloshirt_redwhite"]) the
+		if(_item in ["U_C_Poloshirt_redwhite"]) then {
 			[] spawn {
 				while {true} do {
 					waitUntil{uniform player == "U_C_Poloshirt_redwhite"};
@@ -94,12 +75,31 @@ switch(playerSide) do
 				};
 			};
 		};
-		if(_item in ["U_C_Commoner1_1"]) the
+		if(_item in ["U_C_Commoner1_1"]) then {
 			[] spawn {
 				while {true} do {
 					waitUntil{uniform player == "U_C_Commoner1_1"};
 					player setObjectTextureGlobal [0, "textures\civilian_uniform_7.jpg"];
 					waitUntil{uniform player != "U_C_Commoner1_1"};
+				};
+			};
+		};
+	};
+	case west: {
+		if(_item in ["U_Rangemaster"]) then {
+			[] spawn {
+				while {true} do {
+					waitUntil{uniform player == "U_Rangemaster"};
+					switch(true) do {
+						case ((FETCH_CONST(life_coplevel)) < 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+						case ((FETCH_CONST(life_coplevel)) == 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+						case ((FETCH_CONST(life_coplevel)) == 3) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+						case ((FETCH_CONST(life_coplevel)) == 4) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+						case ((FETCH_CONST(life_coplevel)) == 5) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+						case ((FETCH_CONST(life_coplevel)) == 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+						case ((FETCH_CONST(life_coplevel)) > 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };	
+					};
+					waitUntil{uniform player != "U_Rangemaster"};
 				};
 			};
 		};
@@ -110,11 +110,11 @@ switch(playerSide) do
 				while {true} do {
 					waitUntil{uniform player == "U_Rangemaster"};
 					switch(true) do {
-						case (FETCH_CONST(life_medicLevel) < 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
-						case (FETCH_CONST(life_medicLevel) == 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
-						case (FETCH_CONST(life_medicLevel) == 3) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
-						case (FETCH_CONST(life_medicLevel) == 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
-						case (FETCH_CONST(life_medicLevel) > 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+						case ((FETCH_CONST(life_medicLevel)) < 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+						case ((FETCH_CONST(life_medicLevel)) == 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+						case ((FETCH_CONST(life_medicLevel)) == 3) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+						case ((FETCH_CONST(life_medicLevel)) == 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+						case ((FETCH_CONST(life_medicLevel)) > 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
 					};
 					waitUntil{uniform player != "U_Rangemaster"};
 				};

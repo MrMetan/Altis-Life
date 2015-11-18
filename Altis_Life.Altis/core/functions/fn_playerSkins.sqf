@@ -33,24 +33,24 @@ switch(playerSide) do {
 	case west: {
 		if (uniform player == "U_Rangemaster") then {
 			switch(true) do {
-				case (FETCH_CONST(life_coplevel) < 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-				case (FETCH_CONST(life_coplevel) == 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-				case (FETCH_CONST(life_coplevel) == 3) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-				case (FETCH_CONST(life_coplevel) == 4) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-				case (FETCH_CONST(life_coplevel) == 5) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-				case (FETCH_CONST(life_coplevel) == 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
-				case (FETCH_CONST(life_coplevel) > 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };	
+				case ((FETCH_CONST(life_coplevel)) < 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+				case ((FETCH_CONST(life_coplevel)) == 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+				case ((FETCH_CONST(life_coplevel)) == 3) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+				case ((FETCH_CONST(life_coplevel)) == 4) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+				case ((FETCH_CONST(life_coplevel)) == 5) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+				case ((FETCH_CONST(life_coplevel)) == 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+				case ((FETCH_CONST(life_coplevel)) > 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };	
 			};
 		};
 	};
 	case independent: {
 		if (uniform player == "U_Rangemaster") then {
 			switch(true) do {
-				case (FETCH_CONST(life_medicLevel) < 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
-				case (FETCH_CONST(life_medicLevel) == 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
-				case (FETCH_CONST(life_medicLevel) == 3) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
-				case (FETCH_CONST(life_medicLevel) == 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
-				case (FETCH_CONST(life_medicLevel) > 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+				case ((FETCH_CONST(life_medicLevel)) < 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+				case ((FETCH_CONST(life_medicLevel)) == 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+				case ((FETCH_CONST(life_medicLevel)) == 3) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+				case ((FETCH_CONST(life_medicLevel)) == 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+				case ((FETCH_CONST(life_medicLevel)) > 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
 			};
 		};
 	};
