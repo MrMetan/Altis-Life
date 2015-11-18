@@ -90,7 +90,7 @@ class Life_Clothing {
 		{
 			idc = -1;
 			text = "$STR_Global_Close";
-			onButtonClick = "closeDialog 0; [] call life_fnc_playerSkins;";
+			onButtonClick = "[] call life_fnc_playerSkins; closeDialog 0;";
 			x = 0.147 * safezoneW + safezoneX;
 			y = 0.489992 * safezoneH + safezoneY;
 			w = (6.25 / 40);
