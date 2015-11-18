@@ -116,6 +116,8 @@ life_oldBackpackItems = backpackItems player;
 life_oldGlasses = goggles player;
 life_oldHat = headgear player;
 
+[] call life_fnc_playerSkins;
+
 waitUntil {isNull (findDisplay 3100)};
 {if(_x != player) then {_x hideObject false;};} foreach playableUnits;
 detach player;
@@ -159,6 +161,7 @@ if(isNil "life_clothesPurchased") exitWith {
 			};
 		};
 	};
+	[] call life_fnc_playerSkins;
 };
 life_clothesPurchased = nil;
 
