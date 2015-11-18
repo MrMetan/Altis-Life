@@ -18,12 +18,12 @@ switch (_filter) do
 	case 0:
 	{
 		[
-		["U_C_Poloshirt_blue","Poloshirt Blue",250],
-		["U_C_Poloshirt_burgundy","Poloshirt Burgundy",275],
-		["U_C_Poloshirt_redwhite","Poloshirt Red/White",150],
-		["U_C_Poloshirt_salmon","Poloshirt Salmon",175],
-		["U_C_Poloshirt_stripped","Poloshirt stripped",125],
-		["U_C_Poloshirt_tricolour","Poloshirt Tricolor",350],
+		["U_C_Poloshirt_blue","Sesame Street, Elmo",250],
+		["U_C_Poloshirt_burgundy","The Muppets, Kermit",275],
+		["U_C_Poloshirt_redwhite","Futurama, Zoidberg",150],
+		["U_C_Poloshirt_salmon","Pineapple",175],
+		["U_C_Poloshirt_stripped","Nintendo, Mario",125],
+		["U_C_Poloshirt_tricolour","Family Guy, Meg",350],
 		["U_C_Poor_2","Rag tagged clothes",250],
 		["U_IG_Guerilla2_2","Green stripped shirt & Pants",650],
 		["U_IG_Guerilla3_1","Brown Jacket & Pants",735],
