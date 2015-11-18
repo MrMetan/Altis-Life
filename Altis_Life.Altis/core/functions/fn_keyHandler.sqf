@@ -64,6 +64,13 @@ switch (_code) do {
 		};
 	};
 	
+	//Load player skins when close dialog
+	case 1: {
+		if(dialog) then {
+			[] call life_fnc_playerSkins;
+		};
+	};
+	
 	//Holster / recall weapon.
 	case 35: {
 		if(_shift && !_ctrlKey && !(EQUAL(currentWeapon player,""))) then {
