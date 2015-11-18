@@ -21,6 +21,22 @@ if((FETCH_CONST(life_coplevel) == 0) && (FETCH_CONST(life_adminlevel) == 0)) the
 	sleep 35;
 };
 
+[] spawn {
+	while {true} do {
+		waitUntil{uniform player == "U_Rangemaster"};
+		switch(true) do {
+			case (FETCH_CONST(life_coplevel) < 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+			case (FETCH_CONST(life_coplevel) == 2) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+			case (FETCH_CONST(life_coplevel) == 3) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+			case (FETCH_CONST(life_coplevel) == 4) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+			case (FETCH_CONST(life_coplevel) == 5) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+			case (FETCH_CONST(life_coplevel) == 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };
+			case (FETCH_CONST(life_coplevel) > 6) : { player setObjectTextureGlobal [0, "textures\cop_uniform.jpg"]; };	
+		};
+		waitUntil{uniform player != "U_Rangemaster"};
+	};
+};
+
 player setVariable["rank",(FETCH_CONST(life_coplevel)),true];
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.

@@ -15,6 +15,20 @@ if((FETCH_CONST(life_medicLevel)) < 1) exitWith {
 	sleep 35;
 };
 
+[] spawn {
+	while {true} do {
+		waitUntil{uniform player == "U_Rangemaster"};
+		switch(true) do {
+			case (FETCH_CONST(life_medicLevel) < 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+			case (FETCH_CONST(life_medicLevel) == 2) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+			case (FETCH_CONST(life_medicLevel) == 3) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+			case (FETCH_CONST(life_medicLevel) == 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+			case (FETCH_CONST(life_medicLevel) > 4) : { player setObjectTextureGlobal [0, "textures\medic_uniform.jpg"]; };
+		};
+		waitUntil{uniform player != "U_Rangemaster"};
+	};
+};
+
 [] call life_fnc_spawnMenu;
 waitUntil{!isNull (findDisplay 38500)}; //Wait for the spawn selection to be open.
 waitUntil{isNull (findDisplay 38500)}; //Wait for the spawn selection to be done.
