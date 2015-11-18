@@ -30,6 +30,8 @@ ctrlSetText [3103,localize _shopTitle];
 createDialog "Life_Clothing";
 disableSerialization;
 
+(findDisplay 3100) displaySetEventHandler ["KeyDown","if((_this select 1) == 1) then {true}"]; //Block the ESC menu
+
 //Cop / Civ Pre Check
 if((SEL(_this,3) in ["bruce","dive","reb","kart"] && playerSide != civilian)) exitWith {hint localize "STR_Shop_NotaCiv"; closeDialog 0;};
 if((SEL(_this,3) == "reb" && !license_civ_rebel)) exitWith {hint localize "STR_Shop_NotaReb"; closeDialog 0;};
@@ -200,5 +202,4 @@ if((life_clothing_purchase select 4) == -1) then {
 };
 
 life_clothing_purchase = [-1,-1,-1,-1,-1];
-[] call life_fnc_playerSkins;
 [] call life_fnc_saveGear;
