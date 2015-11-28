@@ -59,7 +59,7 @@ _checkFunction = {
 							_find = _allowedVariables find [_x,_varType];
 							if(EQUAL(_find,-1)) then {
 								diag_log format["Variable: %1 is not allowed TYPE: %2 NS: MN",_x,_varType];
-								failMission "SpyGlass";
+								//failMission "SpyGlass";
 							};
 						};
 					};
@@ -81,7 +81,7 @@ _uiCheckFunction = {
 								_find = _allowedVariables_UI find [_x,_varType];
 								if(EQUAL(_find,-1)) then {
 									diag_log format["Variable: %1 is not allowed TYPE: %2 NS: UI",_x,_varType];
-									failMission "SpyGlass";
+									//failMission "SpyGlass";
 								};
 							};
 						};
